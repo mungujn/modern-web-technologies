@@ -9,12 +9,15 @@ Uganda has the 37th highest maternal mortality rate in the world. The maternal m
 Some screenshots of the application
 
 The PWA running in a browser
+
 ![The PWA running in a browser](https://github.com/mungujn/modern-web-technologies/raw/master/images/pwa_in_browser.png "The PWA running in a browser")
 
 The PWA running on an android tablet
+
 ![The PWA running on an android tablet](https://github.com/mungujn/modern-web-technologies/raw/master/images/predictions.png "The PWA running on an android tablet")
 
 Prediction shown alongside current medical supply
+
 ![Prediction shown alongside current medical supply ](https://github.com/mungujn/modern-web-technologies/raw/master/images/pwa_in_tablet.png "Prediction shown alongside current medical supply ")
 
 The full paper can be accessed [Here](https://github.com/mungujn/modern-web-technologies/raw/master/Maternal_Health-Logistics-Prediction-Solution_FINAL%20github.com_mungujn.pdf "M4D2018 paper for this repository")
