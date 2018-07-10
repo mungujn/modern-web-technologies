@@ -3,12 +3,12 @@
  */
 import firebase from 'firebase'
 const config = {
-    apiKey: "AIzaSyDAsG9Ki8P1Q8PDC3Xl0P42ngFGV07BHGA",
-    authDomain: "celestini-muk-2017.firebaseapp.com",
-    databaseURL: "https://celestini-muk-2017.firebaseio.com",
-    projectId: "celestini-muk-2017",
-    storageBucket: "celestini-muk-2017.appspot.com",
-    messagingSenderId: "374890776245"
+    apiKey: "",
+    authDomain: "",
+    databaseURL: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: ""
 };
 const fire = firebase.initializeApp(config);
 
