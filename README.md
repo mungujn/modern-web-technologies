@@ -1,6 +1,6 @@
 # Building A Low Cost Obstetric Equipment and Supplies Prediction System Using Modern Mobile Web Technologies
 
-Source code for a paper submitted to the 6th International Conference on Mobile Communication Technology for Development (M4D2018) scheduled for November 2018.
+Source code for a paper submitted to the 6th International Conference on Mobile Communication Technology for Development (M4D2018) scheduled for November 2018. More about the conference [here](https://events.mak.ac.ug/events/6th-international-conference-mobile-communication-technology-development-m4d2018 "M4D2018")
 
 ## Abstract
 
