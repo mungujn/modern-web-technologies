@@ -20,4 +20,4 @@ Prediction shown alongside current medical supply
 
 ![Prediction shown alongside current medical supply ](https://github.com/mungujn/modern-web-technologies/raw/master/images/pwa_in_tablet.png "Prediction shown alongside current medical supply ")
 
-The full paper can be accessed [Here](https://github.com/mungujn/modern-web-technologies/raw/master/Maternal_Health-Logistics-Prediction-Solution_FINAL%20github.com_mungujn.pdf "M4D2018 paper for this repository")
+The full paper can be accessed [Here](https://github.com/mungujn/modern-web-technologies/raw/master/M4D_2018_paper_11_Health_Logistics_Predictions.pdf "M4D2018 paper for this repository")
