@@ -1,13 +1,13 @@
 /**
  * Created by Mungujakisa on 9/8/2017.
  */
-import React, {Component} from 'react';
-import {AppBar, Toolbar, Typography} from "material-ui";
+import React, { Component } from 'react';
+import { AppBar, Toolbar, Typography } from 'material-ui';
 
 class AppBarC extends Component {
     render() {
         const style = {
-            color: "white",
+            color: 'white'
         };
 
         return (
@@ -15,7 +15,9 @@ class AppBarC extends Component {
                 <AppBar position="static">
                     <Toolbar disableGutters>
                         <Typography type="title">
-                            <span style={style}>{this.props.toolbar_title}</span>
+                            <span style={style}>
+                                {this.props.toolbar_title}
+                            </span>
                         </Typography>
                     </Toolbar>
                 </AppBar>

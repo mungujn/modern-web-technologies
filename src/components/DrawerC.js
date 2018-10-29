@@ -1,19 +1,18 @@
 /**
  * Created by Mungujakisa on 9/8/2017.
  */
-import React, {Component} from 'react';
-import {Divider, Drawer, List} from "material-ui";
+import React, { Component } from 'react';
+import { Divider, Drawer, List } from 'material-ui';
 import DRAWER_WIDTH from '../utilities/constants';
 
 class DrawerC extends Component {
-
     render() {
         const drawer_width = DRAWER_WIDTH;
 
         const paper = {
             position: 'relative',
             height: 'auto',
-            width: drawer_width,
+            width: drawer_width
         };
 
         const drawerHeader = {
@@ -24,7 +23,7 @@ class DrawerC extends Component {
             <Drawer
                 type="permanent"
                 classes={{
-                    paper: paper,
+                    paper: paper
                 }}
             >
                 <div className={drawerHeader} />

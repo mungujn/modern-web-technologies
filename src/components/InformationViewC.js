@@ -277,5 +277,3 @@ class InformationViewC extends Component {
 }
 
 export default InformationViewC;
-
-

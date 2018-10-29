@@ -210,7 +210,6 @@ class LayoutC extends Component {
 
         return (
             <div>
-                /**/
                 <AppBar style={styles.appBar}>
                     <Toolbar>
                         <Typography
@@ -223,7 +222,6 @@ class LayoutC extends Component {
                         </Typography>
                     </Toolbar>
                 </AppBar>
-                /**/ /**/
                 <Drawer
                     type="permanent"
                     classes={{
@@ -234,7 +232,6 @@ class LayoutC extends Component {
                     <Divider />
                     <List>{expanded_drawer_items}</List>
                 </Drawer>
-                /**/
                 <main style={styles.content}>
                     <Switch>
                         <Route exact path="/" />
@@ -289,7 +286,7 @@ class LayoutC extends Component {
                                         this
                                     )}
                                     setDrawerItems={this.setDrawerItems.bind(
-                                        this
+                                        this 
                                     )}
                                 />
                             )}
