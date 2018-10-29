@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
-import './App.css';
-import LayoutC from "./components/LayoutC";
+import LayoutC from './components/LayoutC';
 
 class App extends Component {
-  render() {
-    return (
-     <LayoutC/>
-    );
-  }
+    render() {
+        return <LayoutC />;
+    }
 }
 
 export default App;

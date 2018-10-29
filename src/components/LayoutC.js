@@ -1,7 +1,7 @@
 /**
  * Created by Mungujakisa on 9/8/2017.
  */
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Drawer from 'material-ui/Drawer';
 import AppBar from 'material-ui/AppBar';
 import Toolbar from 'material-ui/Toolbar';
@@ -9,98 +9,172 @@ import List from 'material-ui/List';
 import Typography from 'material-ui/Typography';
 import Divider from 'material-ui/Divider';
 import InboxIcon from 'material-ui-icons/Inbox';
-import {ListItem, ListItemIcon, ListItemText} from "material-ui";
+import { ListItem, ListItemIcon, ListItemText } from 'material-ui';
 import PregnantWoman from 'material-ui-icons/PregnantWoman';
 import LocalHospital from 'material-ui-icons/LocalHospital';
 import Assessment from 'material-ui-icons/Assessment';
-import {NavLink, Route, Switch} from "react-router-dom";
-import MothersHomeC from "./MothersHomeC";
-import PredictionsC from "./PredictionsC";
-import RequestsC from "./RequestsC";
-import {Assignment, DirectionsBus, FolderOpen} from "material-ui-icons";
-import SuppliesC from "./SuppliesC";
-import HealthCentersHomeC from "./HealthCentersHomeC";
+import { NavLink, Route, Switch } from 'react-router-dom';
+import MothersHomeC from './MothersHomeC';
+import PredictionsC from './PredictionsC';
+import RequestsC from './RequestsC';
+import { Assignment, DirectionsBus, FolderOpen } from 'material-ui-icons';
+import SuppliesC from './SuppliesC';
+import HealthCentersHomeC from './HealthCentersHomeC';
 
 class LayoutC extends Component {
-    constructor(){
+    constructor() {
         super();
         this.state = {
-            toolbar_title: "Welcome",
-            drawer_items: ["Predictions", "Mothers", "Supplies", "divider", "Requests", "Dispatches", "divider", "Health Centers"]
+            toolbar_title: 'Welcome',
+            drawer_items: [
+                'Predictions',
+                'Mothers',
+                'Supplies',
+                'divider',
+                'Requests',
+                'Dispatches',
+                'divider',
+                'Health Centers'
+            ]
         };
     }
 
-
-
     setToolbarTitle(toolbar_title) {
-        this.setState({toolbar_title});
+        this.setState({ toolbar_title });
     }
 
     setDrawerItems(drawer_items) {
         // this.setState({drawer_items}) kis
     }
 
-    getDrawerItem(item){
-        switch(item){
-            case "divider":
-                return <Divider />
-            case "Predictions":
-                return <ListItem button>
-                    <ListItemIcon>
-                        <Assessment />
-                    </ListItemIcon>
-                    <ListItemText primary={<NavLink to='/predictions' className="clean_link">{item}</NavLink>}/>
-                </ListItem> ;
-            case "Mothers":
-                return <ListItem button>
-                    <ListItemIcon>
-                        <PregnantWoman />
-                    </ListItemIcon>
-                    <ListItemText primary={<NavLink to='/mothers' className="clean_link">{item}</NavLink>} />
-                </ListItem> ;
-            case "Supplies":
-                return <ListItem button>
-                    <ListItemIcon>
-                        <Assignment />
-                    </ListItemIcon>
-                    <ListItemText primary={<NavLink to='/supplies' className="clean_link">{item}</NavLink>} />
-                </ListItem> ;
-            case "Requests":
-                return <ListItem button>
-                    <ListItemIcon>
-                        <FolderOpen />
-                    </ListItemIcon>
-                    <ListItemText primary={<NavLink to='/requests' className="clean_link">{item}</NavLink>} />
-                </ListItem> ;
-            case "Dispatches":
-                return <ListItem button>
-                    <ListItemIcon>
-                        <DirectionsBus />
-                    </ListItemIcon>
-                    <ListItemText primary={<NavLink to='/dispatches' className="clean_link">{item}</NavLink>} />
-                </ListItem> ;
-            case "Health Centers":
-                return <ListItem button>
-                    <ListItemIcon>
-                        <LocalHospital />
-                    </ListItemIcon>
-                    <ListItemText primary={<NavLink to='/health-centers' className="clean_link">{item}</NavLink>} />
-                </ListItem> ;
+    getDrawerItem(item) {
+        switch (item) {
+            case 'divider':
+                return <Divider />;
+            case 'Predictions':
+                return (
+                    <ListItem button>
+                        <ListItemIcon>
+                            <Assessment />
+                        </ListItemIcon>
+                        <ListItemText
+                            primary={
+                                <NavLink
+                                    to="/predictions"
+                                    className="clean_link"
+                                >
+                                    {item}
+                                </NavLink>
+                            }
+                        />
+                    </ListItem>
+                );
+            case 'Mothers':
+                return (
+                    <ListItem button>
+                        <ListItemIcon>
+                            <PregnantWoman />
+                        </ListItemIcon>
+                        <ListItemText
+                            primary={
+                                <NavLink to="/mothers" className="clean_link">
+                                    {item}
+                                </NavLink>
+                            }
+                        />
+                    </ListItem>
+                );
+            case 'Supplies':
+                return (
+                    <ListItem button>
+                        <ListItemIcon>
+                            <Assignment />
+                        </ListItemIcon>
+                        <ListItemText
+                            primary={
+                                <NavLink to="/supplies" className="clean_link">
+                                    {item}
+                                </NavLink>
+                            }
+                        />
+                    </ListItem>
+                );
+            case 'Requests':
+                return (
+                    <ListItem button>
+                        <ListItemIcon>
+                            <FolderOpen />
+                        </ListItemIcon>
+                        <ListItemText
+                            primary={
+                                <NavLink to="/requests" className="clean_link">
+                                    {item}
+                                </NavLink>
+                            }
+                        />
+                    </ListItem>
+                );
+            case 'Dispatches':
+                return (
+                    <ListItem button>
+                        <ListItemIcon>
+                            <DirectionsBus />
+                        </ListItemIcon>
+                        <ListItemText
+                            primary={
+                                <NavLink
+                                    to="/dispatches"
+                                    className="clean_link"
+                                >
+                                    {item}
+                                </NavLink>
+                            }
+                        />
+                    </ListItem>
+                );
+            case 'Health Centers':
+                return (
+                    <ListItem button>
+                        <ListItemIcon>
+                            <LocalHospital />
+                        </ListItemIcon>
+                        <ListItemText
+                            primary={
+                                <NavLink
+                                    to="/health-centers"
+                                    className="clean_link"
+                                >
+                                    {item}
+                                </NavLink>
+                            }
+                        />
+                    </ListItem>
+                );
             default:
-                return <ListItem button>
-                    <ListItemIcon>
-                        <InboxIcon />
-                    </ListItemIcon>
-                    <ListItemText primary={<NavLink to='/predictions' className="clean_link">{item}</NavLink>} />
-                </ListItem> ;
+                return (
+                    <ListItem button>
+                        <ListItemIcon>
+                            <InboxIcon />
+                        </ListItemIcon>
+                        <ListItemText
+                            primary={
+                                <NavLink
+                                    to="/predictions"
+                                    className="clean_link"
+                                >
+                                    {item}
+                                </NavLink>
+                            }
+                        />
+                    </ListItem>
+                );
         }
-
     }
 
     render() {
         const drawerWidth = 240;
 
-        const styles = ({
+        const styles = {
             appBar: {
                 position: 'absolute',
                 width: `calc(100% - ${drawerWidth}px)`,
@@ -111,7 +185,7 @@ class LayoutC extends Component {
             drawerPaper: {
                 position: 'relative',
                 height: 'auto',
-                width: drawerWidth,
+                width: drawerWidth
             },
             drawerHeader: {
                 height: 56,
@@ -122,16 +196,16 @@ class LayoutC extends Component {
                 padding: 30,
                 height: '100%',
                 marginTop: 56,
-                marginLeft: drawerWidth,
+                marginLeft: drawerWidth
             },
             push: {
-                marginBottom: "10px",
-                marginLeft: "10px"
+                marginBottom: '10px',
+                marginLeft: '10px'
             }
-        });
+        };
 
-        let expanded_drawer_items = this.state.drawer_items.map(item =>{
-            return this.getDrawerItem(item)
+        let expanded_drawer_items = this.state.drawer_items.map(item => {
+            return this.getDrawerItem(item);
         });
 
         return (
@@ -139,37 +213,87 @@ class LayoutC extends Component {
                 /**/
                 <AppBar style={styles.appBar}>
                     <Toolbar>
-                        <Typography style={styles.push} type="title" color="inherit" noWrap>
-                            <span >
-                                {this.state.toolbar_title}
-                            </span>
+                        <Typography
+                            style={styles.push}
+                            type="title"
+                            color="inherit"
+                            noWrap
+                        >
+                            <span>{this.state.toolbar_title}</span>
                         </Typography>
-
                     </Toolbar>
                 </AppBar>
-                /**/
-                /**/
+                /**/ /**/
                 <Drawer
                     type="permanent"
                     classes={{
-                        paper: styles.drawerPaper,
+                        paper: styles.drawerPaper
                     }}
                 >
                     <div style={styles.drawerHeader} />
                     <Divider />
-                    <List>
-                        {expanded_drawer_items}
-                    </List>
+                    <List>{expanded_drawer_items}</List>
                 </Drawer>
                 /**/
                 <main style={styles.content}>
                     <Switch>
-                        <Route exact path='/'/>
-                        <Route path="/predictions" render={() => <PredictionsC setToolbarTitle={this.setToolbarTitle.bind(this)}/>}/>
-                        <Route path="/mothers" render={() => <MothersHomeC setToolbarTitle={this.setToolbarTitle.bind(this)} setDrawerItems={this.setDrawerItems.bind(this)}/>}/>
-                        <Route path="/supplies" render={() => <SuppliesC setToolbarTitle={this.setToolbarTitle.bind(this)}/>}/>
-                        <Route path="/requests" render={() => <RequestsC setToolbarTitle={this.setToolbarTitle.bind(this)} />}/>
-                        <Route path="/health-centers" render={() => <HealthCentersHomeC setToolbarTitle={this.setToolbarTitle.bind(this)} setDrawerItems={this.setDrawerItems.bind(this)}/>}/>
+                        <Route exact path="/" />
+                        <Route
+                            path="/predictions"
+                            render={() => (
+                                <PredictionsC
+                                    setToolbarTitle={this.setToolbarTitle.bind(
+                                        this
+                                    )}
+                                />
+                            )}
+                        />
+                        <Route
+                            path="/mothers"
+                            render={() => (
+                                <MothersHomeC
+                                    setToolbarTitle={this.setToolbarTitle.bind(
+                                        this
+                                    )}
+                                    setDrawerItems={this.setDrawerItems.bind(
+                                        this
+                                    )}
+                                />
+                            )}
+                        />
+                        <Route
+                            path="/supplies"
+                            render={() => (
+                                <SuppliesC
+                                    setToolbarTitle={this.setToolbarTitle.bind(
+                                        this
+                                    )}
+                                />
+                            )}
+                        />
+                        <Route
+                            path="/requests"
+                            render={() => (
+                                <RequestsC
+                                    setToolbarTitle={this.setToolbarTitle.bind(
+                                        this
+                                    )}
+                                />
+                            )}
+                        />
+                        <Route
+                            path="/health-centers"
+                            render={() => (
+                                <HealthCentersHomeC
+                                    setToolbarTitle={this.setToolbarTitle.bind(
+                                        this
+                                    )}
+                                    setDrawerItems={this.setDrawerItems.bind(
+                                        this
+                                    )}
+                                />
+                            )}
+                        />
                     </Switch>
                 </main>
             </div>

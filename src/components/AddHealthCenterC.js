@@ -1,23 +1,22 @@
 /**
  * Created by Mungujakisa on 9/11/2017.
  */
-import React, {Component} from 'react';
-import {Button, Paper, Snackbar, TextField} from "material-ui";
+import React, { Component } from 'react';
+import { Button, Paper, Snackbar, TextField } from 'material-ui';
 import Slide from 'material-ui/transitions/Slide';
-import * as firebase from '../utilities/fire';
+// import * as firebase from '../utilities/fire';
 
 class AddHealthC extends Component {
-
-    constructor(){
+    constructor() {
         super();
         this.state = {
-            first_name: "",
-            last_name: "",
-            weeks_pregnant: "",
-            phone_number: "",
-            location: "",
-            longitude: "",
-            latitude: "",
+            first_name: '',
+            last_name: '',
+            weeks_pregnant: '',
+            phone_number: '',
+            location: '',
+            longitude: '',
+            latitude: '',
             bar: false
         };
 
@@ -26,17 +25,25 @@ class AddHealthC extends Component {
         this.alertUserOfResult = this.alertUserOfResult.bind(this);
     }
 
-    componentDidMount(){
-        this.props.setButtons([{text: "Cancel", link: "/healths"}]);
+    componentDidMount() {
+        // set this views action buttons
+        this.props.setButtons([{ text: 'Cancel', link: '/healths' }]);
     }
 
-    componentWillUnmount(){
-        this.props.setButtons([{text: "Add Health Center", link: "/healths/add"}]);
+    componentWillUnmount() {
+        // reset view action buttons
+        this.props.setButtons([
+            { text: 'Add Health Center', link: '/healths/add' }
+        ]);
     }
 
-    handleSubmit(event){
+    /**
+     * save a health center in the database
+     * @param {*} event browser interaction event
+     */
+    handleSubmit(event) {
         event.preventDefault();
-        window.location =  "/health-centers";
+        window.location = '/health-centers';
         /*
         const health = this.state;
         let promise = firebase.writeUserData(health);
@@ -46,13 +53,13 @@ class AddHealthC extends Component {
         */
     }
 
-    alertUserOfResult(){
+    alertUserOfResult() {
         this.setState({
             bar: true
         });
     }
 
-    handleInput(event){
+    handleInput(event) {
         const name = event.target.name;
         const value = event.target.value;
         this.setState({
@@ -61,9 +68,7 @@ class AddHealthC extends Component {
     }
 
     render() {
-        const text_field_style = {
-
-        };
+        const text_field_style = {};
 
         const button_style = {
             marginBottom: 20
@@ -74,80 +79,85 @@ class AddHealthC extends Component {
         };
 
         return (
-        <Paper style={{width: 500}}>
-            <form style={form_style} onSubmit={this.handleSubmit}>
-                <TextField
-                    required
-                    name="last_name"
-                    label="Name"
-                    defaultValue=""
-                    style={text_field_style}
-                    margin="normal"
-                    onChange={this.handleInput}
+            <Paper style={{ width: 500 }}>
+                <form style={form_style} onSubmit={this.handleSubmit}>
+                    <TextField
+                        required
+                        name="last_name"
+                        label="Name"
+                        defaultValue=""
+                        style={text_field_style}
+                        margin="normal"
+                        onChange={this.handleInput}
+                    />
+
+                    <br />
+
+                    <TextField
+                        required
+                        name="location"
+                        label="Location"
+                        defaultValue=""
+                        style={text_field_style}
+                        margin="normal"
+                        onChange={this.handleInput}
+                    />
+
+                    <br />
+
+                    <TextField
+                        name="longitude"
+                        label="Longitude"
+                        defaultValue=""
+                        style={text_field_style}
+                        margin="normal"
+                        onChange={this.handleInput}
+                    />
+
+                    <br />
+
+                    <TextField
+                        name="latitude"
+                        label="Latitude"
+                        defaultValue=""
+                        style={text_field_style}
+                        margin="normal"
+                        onChange={this.handleInput}
+                    />
+
+                    <br />
+
+                    <TextField
+                        required
+                        name="extra"
+                        label="Health Center Type"
+                        defaultValue=""
+                        style={text_field_style}
+                        margin="normal"
+                        onChange={this.handleInput}
+                    />
+
+                    <br />
+
+                    <Button
+                        type="submit"
+                        raised
+                        color="primary"
+                        style={button_style}
+                    >
+                        Save
+                    </Button>
+                </form>
+                <Snackbar
+                    open={this.state.bar}
+                    onRequestClose={this.handleRequestClose}
+                    transition={<Slide direction="up" />}
+                    SnackbarContentProps={{
+                        'aria-describedby': 'message-id'
+                    }}
+                    message={<span id="message-id">Saved</span>}
                 />
-
-                <br/>
-
-                <TextField
-                    required
-                    name="location"
-                    label="Location"
-                    defaultValue=""
-                    style={text_field_style}
-                    margin="normal"
-                    onChange={this.handleInput}
-                />
-
-                <br/>
-
-                <TextField
-                    name="longitude"
-                    label="Longitude"
-                    defaultValue=""
-                    style={text_field_style}
-                    margin="normal"
-                    onChange={this.handleInput}
-                />
-
-                <br/>
-
-                <TextField
-                    name="latitude"
-                    label="Latitude"
-                    defaultValue=""
-                    style={text_field_style}
-                    margin="normal"
-                    onChange={this.handleInput}
-                />
-
-                <br/>
-
-                <TextField
-                    required
-                    name="extra"
-                    label="Health Center Type"
-                    defaultValue=""
-                    style={text_field_style}
-                    margin="normal"
-                    onChange={this.handleInput}
-                />
-
-                <br/>
-
-                <Button type="submit" raised color="primary" style={button_style}>
-                    Save
-                </Button>
-            </form>
-            <Snackbar
-                open={this.state.bar}
-                onRequestClose={this.handleRequestClose}
-                transition={<Slide direction="up" />}
-                SnackbarContentProps={{
-                    'aria-describedby': 'message-id',
-                }}
-                message={<span id="message-id">Saved</span>}
-            />
-        </Paper>
+            </Paper>
         );
     }
 }
