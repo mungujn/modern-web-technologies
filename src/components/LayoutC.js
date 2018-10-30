@@ -53,7 +53,7 @@ class LayoutC extends Component {
                 return <Divider />;
             case 'Predictions':
                 return (
-                    <ListItem button>
+                    <ListItem button key="predictions">
                         <ListItemIcon>
                             <Assessment />
                         </ListItemIcon>
@@ -71,7 +71,7 @@ class LayoutC extends Component {
                 );
             case 'Mothers':
                 return (
-                    <ListItem button>
+                    <ListItem button key="mothers">
                         <ListItemIcon>
                             <PregnantWoman />
                         </ListItemIcon>
@@ -86,7 +86,7 @@ class LayoutC extends Component {
                 );
             case 'Supplies':
                 return (
-                    <ListItem button>
+                    <ListItem button key="supplies">
                         <ListItemIcon>
                             <Assignment />
                         </ListItemIcon>
@@ -101,7 +101,7 @@ class LayoutC extends Component {
                 );
             case 'Requests':
                 return (
-                    <ListItem button>
+                    <ListItem button key="requests">
                         <ListItemIcon>
                             <FolderOpen />
                         </ListItemIcon>
@@ -116,7 +116,7 @@ class LayoutC extends Component {
                 );
             case 'Dispatches':
                 return (
-                    <ListItem button>
+                    <ListItem button key="dispatches">
                         <ListItemIcon>
                             <DirectionsBus />
                         </ListItemIcon>
@@ -134,7 +134,7 @@ class LayoutC extends Component {
                 );
             case 'Health Centers':
                 return (
-                    <ListItem button>
+                    <ListItem button key="health-centers">
                         <ListItemIcon>
                             <LocalHospital />
                         </ListItemIcon>
@@ -152,7 +152,7 @@ class LayoutC extends Component {
                 );
             default:
                 return (
-                    <ListItem button>
+                    <ListItem button key="predictions">
                         <ListItemIcon>
                             <InboxIcon />
                         </ListItemIcon>
@@ -286,7 +286,7 @@ class LayoutC extends Component {
                                         this
                                     )}
                                     setDrawerItems={this.setDrawerItems.bind(
-                                        this 
+                                        this
                                     )}
                                 />
                             )}
