@@ -6,9 +6,3 @@ script:
   - npm install
   - npm test
   - npm run build
-deploy:
-  provider: pages
-  github_token: $githubToken
-  local_dir: build
-  on:
-    branch: master
