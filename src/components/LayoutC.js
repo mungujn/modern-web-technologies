@@ -30,10 +30,10 @@ class LayoutC extends Component {
                 'Predictions',
                 'Mothers',
                 'Supplies',
-                'divider',
+                'divider_1',
                 'Requests',
                 'Dispatches',
-                'divider',
+                'divider_2',
                 'Health Centers'
             ]
         };
@@ -49,8 +49,10 @@ class LayoutC extends Component {
 
     getDrawerItem(item) {
         switch (item) {
-            case 'divider':
-                return <Divider />;
+            case 'divider_1':
+                return <Divider key="divider_1"/>;
+            case 'divider_2':
+                return <Divider key="divider_2"/>;
             case 'Predictions':
                 return (
                     <ListItem button key="predictions">
